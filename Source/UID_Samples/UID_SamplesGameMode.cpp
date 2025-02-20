@@ -13,3 +13,9 @@ AUID_SamplesGameMode::AUID_SamplesGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 }
+
+
+UCharacterInventory* AUID_SamplesGameMode::GetCharacterInventory()
+{
+	return UCharacterInventory::GetInstance();
+}

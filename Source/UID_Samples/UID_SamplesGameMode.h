@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "Public/UCharacterInventory.h"
 #include "UID_SamplesGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -13,6 +14,9 @@ class AUID_SamplesGameMode : public AGameModeBase
 
 public:
 	AUID_SamplesGameMode();
+
+	UFUNCTION(BlueprintCallable)
+	UCharacterInventory* GetCharacterInventory();
 };
 
 
