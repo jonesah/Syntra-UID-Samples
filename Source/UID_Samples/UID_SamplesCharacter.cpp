@@ -18,8 +18,6 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 AUID_SamplesCharacter::AUID_SamplesCharacter()
 {
-    //Een comment ter illustratie
-
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 		
