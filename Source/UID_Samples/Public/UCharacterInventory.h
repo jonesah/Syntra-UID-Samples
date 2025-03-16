@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FInventoryItem.h"
 #include "UCharacterInventory.generated.h"
 /**
  * 
@@ -13,13 +14,20 @@ class UID_SAMPLES_API UCharacterInventory : public UObject
 	GENERATED_BODY()
 private:
 	static UCharacterInventory* _instance;
+
+	
+	
 public:
 	
 	static UCharacterInventory* GetInstance();
 
+	UPROPERTY(Blueprintable, BlueprintReadWrite)
+	TArray<FInventoryItem> Items;
+
 	UFUNCTION(BlueprintCallable)
 	void Print();
-	
+
+	UCharacterInventory();
 };
 
 UCharacterInventory* UCharacterInventory::_instance = nullptr;

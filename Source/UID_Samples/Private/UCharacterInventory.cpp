@@ -22,4 +22,9 @@ void UCharacterInventory::Print()
 TEXT("Inside the CharacterInventory"));
 }
 
+UCharacterInventory::UCharacterInventory()
+{
+	
+}
+
 
