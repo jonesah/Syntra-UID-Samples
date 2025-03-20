@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FInventoryItem.h"
 #include "UCharacterInventory.generated.h"
 /**
  * 
@@ -19,6 +20,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Print();
+
+	TArray<FInventoryItem> InventoryItems;
 	
 };
 
