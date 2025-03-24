@@ -31,6 +31,9 @@ public:
 	UCharacterInventory();
 
 	~UCharacterInventory();
+    
+    UFUNCTION(BlueprintCallable)
+	void AddItem(FInventoryItemDefinition definition);
 };
 
 UCharacterInventory* UCharacterInventory::_instance = nullptr;
