@@ -7,7 +7,7 @@ UCharacterInventory* UCharacterInventory::GetInstance()
 {
 	if(_instance == nullptr)
 	{
-		_instance = NewObject<UCharacterInventory>();
+		_instance = NewObject<UCharacterInventory>() ;
 	}
 
 	return _instance;
@@ -30,6 +30,12 @@ UCharacterInventory::UCharacterInventory()
 		int column = i % InventoryRowSize;
 		InventoryItems.Add(FInventoryItem(row, column));
 	}
+}
+
+UCharacterInventory::~UCharacterInventory()
+{
+	_instance = nullptr;
+	InventoryItems = TArray<FInventoryItem>();
 }
 
 

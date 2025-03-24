@@ -21,14 +21,16 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Print();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite)
 	TArray<FInventoryItem> InventoryItems;
 
 	int InventorySize = 64;
 
 	int InventoryRowSize = 8;
-
+	
 	UCharacterInventory();
+
+	~UCharacterInventory();
 };
 
 UCharacterInventory* UCharacterInventory::_instance = nullptr;

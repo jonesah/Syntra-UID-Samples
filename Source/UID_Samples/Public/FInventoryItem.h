@@ -15,6 +15,8 @@ struct FInventoryItem
 	int Row = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int Column = 0;
+
+	int Test = 0;
 	
 	FInventoryItem()
 	{
